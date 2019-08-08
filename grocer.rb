@@ -13,7 +13,6 @@ require "pry"
 def consolidate_cart(cart)
   consolidated = { }
   cart.each do |item|
-    # binding.pry
     if consolidated[item.keys[0]]
       consolidated[item.keys[0]][:count] += 1
     else
