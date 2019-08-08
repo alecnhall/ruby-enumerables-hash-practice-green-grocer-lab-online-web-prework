@@ -14,7 +14,8 @@ def consolidate_cart(cart)
   consolidated = { }
   cart.each do |item|
     # binding.pry
-    if 
+    if consolidated[item.keys[0]]
+      consolidated[item.keys[0]][:count] += 1
     consolidated[item.keys[0]] = {
       price:item.values[0][:price],
       clearance:item.values[0][:clearance],
